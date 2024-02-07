@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto', sans-serif;
+}
+
+#contents {
+    background-color: #ffc244;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.nav {
+    display: flex;
+    height: 100px;
+    background-color: #ffc244;
+    width: 100%;
+    justify-content: center;
+    /*background-color: purple;*/
+}
+
+.nav-content {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #31A082;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.contact-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    background-color: #31A082;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    padding: 12px 17px;
+    font-weight: 900;
+    transition: all 0.3s ease;
+    background-color: #228d70;
+}
+
+.hero-front {
+    height: 100vh;
+    display: flex;
+    background-color: #ffc244;
+}
+
+.whole-hero-content {
+    display: flex;
+    align-items: center;
+}
+
+.animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.food-image img {
+    height: 90%;
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-right h1 {
+    word-wrap: anywhere;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.07;
+    margin: 32px 0;
+    width: 600px;
+    color: black;
+    text-align: center;
+}
+
+.hero-right-content p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.search-part {
+    display: flex;
+    margin-top: 30px;
+}
+
+.search-left-icon {
+    background-color: #31A082;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.search-left-icon img {
+    padding: 12px;
+}
+
+.search-box {
+    display: flex;
+}
+
+
+input {
+    height: 47px;
+    border: none;
+    width: 500px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-left: 12px;
+}
+
+input::placeholder {
+    color: #C1C1C1FF;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+input:active {
+    border: none;
+}
+
+/*.contacts {*/
+/*    display: none;*/
+/*}*/
+
+.contact-tab {
+    display: none;
+}
+
+.show-contacts {
+    display: block;
+}

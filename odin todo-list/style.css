@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-4?styles=18006,18005,18004,18003');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.whole-content-container {
+    display: flex;
+    height: 100vh;
+    width: 70%;
+}
+
+.whole-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.date-task-no {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-task-no h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.task-no {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(128, 128, 128);
+}
+
+.task-no p {
+    margin: 0;
+}
+
+.todo-lists {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+
+article p {
+    font-size: 15px;
+}
