@@ -10,18 +10,13 @@ class TodolistClass {
         this.title = title
         this.description = description
     }
-
-    // addTodo () {
-    //     const newTodos = new TodolistClass(this.title, this.description)
-    //     todolistLibrary.push(newTodos)
-    //     console.log(todolistLibrary)
-    // }
 }
 
 // function to create new todolist and add to library
 function addTodoToLibrary(title, description) {
-    return new TodolistClass(title, description)
-    // console.log(todolistLibrary)
+    const newTodos = new TodolistClass(title, description)
+    todolistLibrary.push(newTodos)
+    console.log(todolistLibrary)
 }
 
 addTodoToLibrary('wash', 'to wash cloth')
