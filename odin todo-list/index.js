@@ -18,3 +18,5 @@ function addTodoToLibrary(title, description) {
     todolistLibrary.push(newTodo)
     console.log(todolistLibrary)
 }
+
+addTodoToLibrary('')
