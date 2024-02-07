@@ -8,5 +8,11 @@ class TodolistClass {
         this.title = title
         this.description = description
     }
+
+    newTodo() {
+        const newTodo = new TodolistClass(this.title, this.description)
+        todolistLibrary.push(newTodo)
+        console.log(todolistLibrary)
+    }
 }
 
