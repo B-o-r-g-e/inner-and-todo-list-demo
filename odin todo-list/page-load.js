@@ -1,10 +1,11 @@
+const todolistContainer = document.querySelector('.todo-lists')
+
 export const todolistLibrary = []
 export const taskCount = document.querySelector('.task-count')
 
 //automate task count
 export function taskCountFunc() {
     taskCount.innerHTML = `${todolistLibrary.length} tasks`
-
 }
 
 //create class prototype for todolist
@@ -22,4 +23,5 @@ export function addTodoToLibrary(title, description) {
     console.log(todolistLibrary)
 }
 
-// addTodoToLibrary('wash', 'to wash cloth')
+
+//
