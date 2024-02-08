@@ -6,6 +6,7 @@ export const taskCount = document.querySelector('.task-count')
 //automate task count
 export function taskCountFunc() {
     taskCount.innerHTML = `${todolistLibrary.length} tasks`
+    console.log(todolistLibrary.length)
 }
 
 //create class prototype for todolist
@@ -64,19 +65,16 @@ export function createTodo() {
     }
 
     function addTask() {
-        // e.preventDefault()
-        // const form = document.querySelector('.form')
-        // const formData = new FormData(form)
-        // const toObject = Object.fromEntries(formData)
-        // console.log(toObject)
-
-
-
         const inputTitle = document.getElementById('todo-title').value
         const inputDescription = document.getElementById('todo-description').value
 
         const object = {inputTitle, inputDescription}
         console.log(object)
+
+        if (inputTitle.trim() === '') {
+            alert('Please fill in a title.');
+            return; // Stop further execution if inputs are empty
+        }
 
         const article = document.createElement('article')
         article.innerHTML = `
