@@ -42,11 +42,20 @@ export function articles () {
 
 //function to create a todos
 export function createTodo() {
+    //button to open add new dialog
     const addNewButton = document.querySelector('.add-new')
     addNewButton.addEventListener('click', openDialog)
+
+    //button to cancel add new dialog
+    const cancel = document.querySelector('.cancel')
+    cancel.addEventListener('click', cancelDialog)
 
     function openDialog() {
         document.getElementById('overlay').style.display = 'block'
         document.querySelector('.todo-dialog').style.display = 'block'
+    }
+    function cancelDialog() {
+        document.getElementById('overlay').style.display = 'none'
+        document.querySelector('.todo-dialog').style.display = 'none'
     }
 }
