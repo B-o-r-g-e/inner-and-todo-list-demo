@@ -89,6 +89,5 @@ export function createTodo() {
         todolistLibrary.push(object)
 
         cancelDialog()
-        console.log(todolistLibrary)
     }
 }

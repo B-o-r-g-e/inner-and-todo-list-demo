@@ -51,7 +51,7 @@ body {
 
 article {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 10px;
     padding: 20px 0;
     border-bottom: 1px solid #ccc;
