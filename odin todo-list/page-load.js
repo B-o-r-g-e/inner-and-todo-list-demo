@@ -24,4 +24,17 @@ export function addTodoToLibrary(title, description) {
 }
 
 
-//
+//function to create new todos in html
+export function articles () {
+    todolistLibrary.forEach((todos) => {
+        const article = document.createElement('article')
+        article.innerHTML = `
+        <label><input type="checkbox" class="checker"></label>
+        <div class="title-description">
+            <p>${todos.title}</p>
+            <p class="description">${todos.description}</p>
+        </div>
+        `
+        todolistContainer.appendChild(article)
+    })
+}

@@ -56,8 +56,22 @@ article {
     padding: 20px 0;
     border-bottom: 1px solid #ccc;
     width: 100%;
+    text-transform: capitalize;
 }
 
 article p {
     font-size: 15px;
+    margin: 0;
+}
+
+.title-description {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.description {
+    text-transform: lowercase;
+    color: rgb(128, 128, 128);
+    font-size: 13px;
 }

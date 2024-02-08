@@ -1,5 +1,6 @@
-import {addTodoToLibrary, taskCountFunc} from "./page-load.js";
+import {addTodoToLibrary, articles, taskCountFunc} from "./page-load.js";
 
 taskCountFunc()
 addTodoToLibrary('wash', 'to wash cloth')
-addTodoToLibrary('goat', 'bleet')
+addTodoToLibrary('goat', 'bleed')
+articles()
