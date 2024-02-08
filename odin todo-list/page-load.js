@@ -20,7 +20,6 @@ class TodolistClass {
 export function addTodoToLibrary(title, description) {
     const newTodos = new TodolistClass(title, description)
     todolistLibrary.push(newTodos)
-    // console.log(todolistLibrary)
 }
 
 
