@@ -6,7 +6,6 @@ export const taskCount = document.querySelector('.task-count')
 //automate task count
 export function taskCountFunc() {
     taskCount.innerHTML = `${todolistLibrary.length} tasks`
-    console.log(todolistLibrary.length)
 }
 
 //create class prototype for todolist
@@ -40,6 +39,11 @@ export function articles () {
     })
 }
 
+function cancelDialog() {
+    document.getElementById('overlay').style.display = 'none'
+    document.querySelector('.todo-dialog').style.display = 'none'
+}
+
 
 //function to create a todos
 export function createTodo() {
@@ -56,10 +60,7 @@ export function createTodo() {
         document.querySelector('.todo-dialog').style.display = 'block'
     }
 
-    function cancelDialog() {
-        document.getElementById('overlay').style.display = 'none'
-        document.querySelector('.todo-dialog').style.display = 'none'
-    }
+    cancelDialog()
 }
 
 export function addTasks() {
@@ -72,7 +73,6 @@ export function addTasks() {
         const inputDescription = document.getElementById('todo-description').value
 
         const object = {inputTitle, inputDescription}
-        console.log(object)
 
         if (inputTitle.trim() === '') {
             alert('Please fill in a title.');
@@ -90,11 +90,6 @@ export function addTasks() {
         todolistContainer.appendChild(article)
 
         todolistLibrary.push(object)
-
-        function cancelDialog() {
-            document.getElementById('overlay').style.display = 'none'
-            document.querySelector('.todo-dialog').style.display = 'none'
-        }
 
         cancelDialog()
     }
