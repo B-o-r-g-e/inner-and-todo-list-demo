@@ -51,18 +51,21 @@ export function createTodo() {
     const cancel = document.querySelector('.cancel')
     cancel.addEventListener('click', cancelDialog)
 
-    //button to add input to library and display
-    const addTaskButton = document.querySelector('.add-task')
-    addTaskButton.addEventListener('click', addTask)
-
     function openDialog() {
         document.getElementById('overlay').style.display = 'block'
         document.querySelector('.todo-dialog').style.display = 'block'
     }
+
     function cancelDialog() {
         document.getElementById('overlay').style.display = 'none'
         document.querySelector('.todo-dialog').style.display = 'none'
     }
+}
+
+export function addTasks() {
+    //button to add input to library and display
+    const addTaskButton = document.querySelector('.add-task')
+    addTaskButton.addEventListener('click', addTask)
 
     function addTask() {
         const inputTitle = document.getElementById('todo-title').value
@@ -87,6 +90,11 @@ export function createTodo() {
         todolistContainer.appendChild(article)
 
         todolistLibrary.push(object)
+
+        function cancelDialog() {
+            document.getElementById('overlay').style.display = 'none'
+            document.querySelector('.todo-dialog').style.display = 'none'
+        }
 
         cancelDialog()
     }
