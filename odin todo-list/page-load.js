@@ -40,4 +40,13 @@ export function articles () {
 }
 
 
+//function to create a todos
+export function createTodo() {
+    const addNewButton = document.querySelector('.add-new')
+    addNewButton.addEventListener('click', openDialog)
 
+    function openDialog() {
+        document.getElementById('overlay').style.display = 'block'
+        document.querySelector('.todo-dialog').style.display = 'block'
+    }
+}
