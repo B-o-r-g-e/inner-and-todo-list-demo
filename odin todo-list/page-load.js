@@ -22,6 +22,16 @@ export function addTodoToLibrary(title, description) {
     todolistLibrary.push(newTodos)
 }
 
+//function to add id to each todos
+export function addID() {
+    //create id for each todos
+    todolistLibrary.forEach((todos, index) => {
+        if (!todos.id) {
+            todos.id = `data${index+1}`
+        }
+    })
+}
+
 
 //function to create new todos in html
 export function articles () {
@@ -90,7 +100,11 @@ export function addTasks() {
 
         todolistLibrary.push(object)
 
+        addID()
+
         cancelDialog()
+
+        console.log(todolistLibrary)
     }
 }
 
