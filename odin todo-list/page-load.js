@@ -110,10 +110,13 @@ export function addTasks() {
 
 //function for checkbox
 export function checkbox() {
-    const checkers = document .querySelectorAll('.checker')
-    checkers.forEach((checker) => {
-        checker.addEventListener('click', () => {
-            console.log('good')
+    todolistLibrary.forEach((todos) => {
+        const checkers = document .querySelectorAll('.checker')
+        checkers.forEach((checker) => {
+            checker.addEventListener('click', () => {
+                console.log('good')
+            })
         })
     })
+
 }
