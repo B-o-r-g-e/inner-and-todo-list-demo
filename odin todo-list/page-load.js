@@ -1,6 +1,6 @@
 const todolistContainer = document.querySelector('.todo-lists')
 
-export const todolistLibrary = []
+const todolistLibrary = []
 export const taskCount = document.querySelector('.task-count')
 
 //automate task count
@@ -20,7 +20,7 @@ class TodolistClass {
 export function addTodoToLibrary(title, description) {
     const newTodos = new TodolistClass(title, description)
     todolistLibrary.push(newTodos)
-    console.log(todolistLibrary)
+    // console.log(todolistLibrary)
 }
 
 
@@ -50,6 +50,10 @@ export function createTodo() {
     const cancel = document.querySelector('.cancel')
     cancel.addEventListener('click', cancelDialog)
 
+    //button to add input to library and display
+    const addTaskButton = document.querySelector('.add-task')
+    addTaskButton.addEventListener('click', addTask)
+
     function openDialog() {
         document.getElementById('overlay').style.display = 'block'
         document.querySelector('.todo-dialog').style.display = 'block'
@@ -57,5 +61,36 @@ export function createTodo() {
     function cancelDialog() {
         document.getElementById('overlay').style.display = 'none'
         document.querySelector('.todo-dialog').style.display = 'none'
+    }
+
+    function addTask() {
+        // e.preventDefault()
+        // const form = document.querySelector('.form')
+        // const formData = new FormData(form)
+        // const toObject = Object.fromEntries(formData)
+        // console.log(toObject)
+
+
+
+        const inputTitle = document.getElementById('todo-title').value
+        const inputDescription = document.getElementById('todo-description').value
+
+        const object = {inputTitle, inputDescription}
+        console.log(object)
+
+        const article = document.createElement('article')
+        article.innerHTML = `
+        <label><input type="checkbox" class="checker"></label>
+        <div class="title-description">
+            <p>${inputTitle}</p>
+            <p class="description">${inputDescription}</p>
+        </div>
+        `
+        todolistContainer.appendChild(article)
+
+        todolistLibrary.push(object)
+
+        cancelDialog()
+        console.log(todolistLibrary)
     }
 }
