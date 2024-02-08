@@ -75,3 +75,14 @@ article p {
     color: rgb(128, 128, 128);
     font-size: 13px;
 }
+
+.add-new {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: capitalize;
+    border: none;
+    background-color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
