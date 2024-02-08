@@ -93,3 +93,13 @@ export function addTasks() {
         cancelDialog()
     }
 }
+
+//function for checkbox
+export function checkbox() {
+    const checkers = document .querySelectorAll('.checker')
+    checkers.forEach((checker) => {
+        checker.addEventListener('click', () => {
+            console.log('good')
+        })
+    })
+}
