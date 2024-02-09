@@ -1,6 +1,6 @@
 const todolistContainer = document.querySelector('.todo-lists')
 
-const todolistLibrary = []
+export const todolistLibrary = []
 export const taskCount = document.querySelector('.task-count')
 
 //automate task count
@@ -105,25 +105,34 @@ export function addTasks() {
         // checkbox()
 
         cancelDialog()
-
-        console.log(todolistLibrary)
     }
 }
 
 //function for checkbox
 export function checkbox() {
-    console.log(todolistLibrary)
     const checker = document.querySelector('.checker')
+
     todolistLibrary.forEach((todos) => {
         const currentTodos = todos.id
-        if (currentTodos) {
-            checker.addEventListener('change', () => {
-                if (checker.checked) {
-                    console.log('good')
-                    todolistLibrary.shift()
-                }
-            })
-            addTasks()
-        }
+        const indexToRemove = todolistLibrary.findIndex(
+            todos => todos.id === currentTodos
+        )
+
+        // if (currentTodos) {
+        //     checker.addEventListener('change', () => {
+        //         if (checker.checked) {
+        //             console.log('good')
+        //             todolistLibrary.shift()
+        //             console.log(todolistLibrary)
+        //         }
+        //     })
+        // }
+
+        checker.addEventListener('change', () => {
+            if (checker.checked && currentTodos) {
+                todolistLibrary.splice(indexToRemove, 1)
+
+            }
+        })
     })
 }
