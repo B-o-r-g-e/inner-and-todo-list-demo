@@ -78,12 +78,12 @@ export function addTasks() {
     addTaskButton.addEventListener('click', addTask)
 
     function addTask() {
-        const inputTitle = document.getElementById('todo-title').value
-        const inputDescription = document.getElementById('todo-description').value
+        const title = document.getElementById('todo-title').value
+        const description = document.getElementById('todo-description').value
 
-        const object = {inputTitle, inputDescription}
+        const object = {title, description}
 
-        if (inputTitle.trim() === '') {
+        if (title.trim() === '') {
             alert('Please fill in a title.');
             return; // Stop further execution if inputs are empty
         }
@@ -92,8 +92,8 @@ export function addTasks() {
         article.innerHTML = `
         <label><input type="checkbox" class="checker"></label>
         <div class="title-description">
-            <p>${inputTitle}</p>
-            <p class="description">${inputDescription}</p>
+            <p>${title}</p>
+            <p class="description">${description}</p>
         </div>
         `
         todolistContainer.appendChild(article)
@@ -101,6 +101,8 @@ export function addTasks() {
         todolistLibrary.push(object)
 
         addID()
+
+        // checkbox()
 
         cancelDialog()
 
@@ -110,13 +112,18 @@ export function addTasks() {
 
 //function for checkbox
 export function checkbox() {
+    console.log(todolistLibrary)
+    const checker = document.querySelector('.checker')
     todolistLibrary.forEach((todos) => {
-        const checkers = document .querySelectorAll('.checker')
-        checkers.forEach((checker) => {
-            checker.addEventListener('click', () => {
-                console.log('good')
+        const currentTodos = todos.id
+        if (currentTodos) {
+            checker.addEventListener('change', () => {
+                if (checker.checked) {
+                    console.log('good')
+                    todolistLibrary.shift()
+                }
             })
-        })
+            addTasks()
+        }
     })
-
 }
