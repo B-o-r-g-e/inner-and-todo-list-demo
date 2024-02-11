@@ -120,3 +120,8 @@ input, textarea {
     padding: 8px;
     margin-bottom: 16px;
 }
+
+.checker {
+    display: flex;
+    width: auto;
+}

@@ -37,14 +37,17 @@ export function addID() {
 export function articles () {
     todolistLibrary.forEach((todos) => {
         const article = document.createElement('article')
-        article.innerHTML = `
-        <label><input type="checkbox" class="checker"></label>
-        <div class="title-description">
+        const titleDescription = document.createElement('div')
+
+        titleDescription.innerHTML = `
+<!--        <label><input type="checkbox" class="checker"></label>-->
             <p>${todos.title}</p>
             <p class="description">${todos.description}</p>
-        </div>
         `
+        article.appendChild(titleDescription)
         todolistContainer.appendChild(article)
+
+        handleCheckBox(article, titleDescription)
     })
 }
 
@@ -89,49 +92,48 @@ export function addTasks() {
         }
 
         const article = document.createElement('article')
-        article.innerHTML = `
-        <label><input type="checkbox" class="checker"></label>
-        <div class="title-description">
+        const titleDescription = document.createElement('div')
+        titleDescription.className = 'title-description'
+        titleDescription.innerHTML = `
+<!--        <label><input type="checkbox" class="checker"></label>-->
             <p>${title}</p>
             <p class="description">${description}</p>
-        </div>
         `
+        article.appendChild(titleDescription)
         todolistContainer.appendChild(article)
 
         todolistLibrary.push(object)
 
         addID()
 
-        // checkbox()
-
         cancelDialog()
+
+        handleCheckBox(article, titleDescription)
     }
 }
 
-//function for checkbox
-export function checkbox() {
-    const checker = document.querySelector('.checker')
 
-    todolistLibrary.forEach((todos) => {
-        const currentTodos = todos.id
-        const indexToRemove = todolistLibrary.findIndex(
-            todos => todos.id === currentTodos
-        )
+//function to handle checkbox
+//Really suffered more on this
+function handleCheckBox(article, titleDescription) {
+    const checkbox = document.createElement('input')
+    checkbox.type = "checkbox"
+    checkbox.className = 'checker'
+    article.insertBefore(checkbox, titleDescription)
 
-        // if (currentTodos) {
-        //     checker.addEventListener('change', () => {
-        //         if (checker.checked) {
-        //             console.log('good')
-        //             todolistLibrary.shift()
-        //             console.log(todolistLibrary)
-        //         }
-        //     })
-        // }
+    checkbox.addEventListener('change', () => {
+        todolistLibrary.forEach((todos) => {
+            const todoId = todos.id
+            const indexToRemove = todolistLibrary.findIndex(
+                todos => todos.id === todoId
+            )
 
-        checker.addEventListener('change', () => {
-            if (checker.checked && currentTodos) {
+            if (checkbox.checked) {
+                console.log('checked')
+
                 todolistLibrary.splice(indexToRemove, 1)
-
+                console.log(todolistLibrary)
+                article.remove()
             }
         })
     })
