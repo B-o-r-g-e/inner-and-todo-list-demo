@@ -135,7 +135,7 @@ input, textarea {
 }
 
 .time-interval-space {
-    display: none;
+    /*display: none;*/
     padding: 1px 30px;
     border: 1px solid #2a2a2a;
 }
