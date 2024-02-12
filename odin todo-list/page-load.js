@@ -134,6 +134,10 @@ function handleCheckBox(article, titleDescription) {
                 todolistLibrary.splice(indexToRemove, 1)
                 console.log(todolistLibrary)
                 article.remove()
+
+                if (todolistLibrary.length === 1) {
+                    article.remove()
+                }
             }
         })
     })
