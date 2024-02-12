@@ -161,6 +161,7 @@ input, textarea {
 
 .calendar-container {
     display: none;
+    /*z-index: 1000;*/
     background: #fff;
     width: 350px;
     border-radius: 10px;

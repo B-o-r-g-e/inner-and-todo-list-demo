@@ -280,3 +280,15 @@ export function calendar() {
     day.addEventListener("click", handleDateClick);
 
 }
+
+//open calendar
+function openCalendar() {
+    const showCalendar = document.querySelector('.show-calendar')
+    const calendarContainer = document.querySelector('.calendar-container')
+
+    showCalendar.addEventListener('click', () => {
+        calendarContainer.style.display = 'block'
+    })
+}
+
+openCalendar()
