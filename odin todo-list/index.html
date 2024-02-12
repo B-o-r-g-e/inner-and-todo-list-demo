@@ -17,29 +17,59 @@
                     <p class="task-count"></p>
                 </div>
             </div>
-            <div class="todo-lists">
-<!--                <article>-->
-<!--                    <label>-->
-<!--                        <input type="checkbox" class="checker">-->
-<!--                    </label>-->
-<!--                    <p>Download additional free apps and plugins </p>-->
-<!--                </article>-->
-            </div>
+            <div class="todo-lists"></div>
             <button class="add-new">
                 <i class="fa fa-plus" aria-hidden="true" style="color: rgb(212,79,68)"></i> add new
             </button>
             <div id="overlay"></div>
             <div class="todo-dialog">
 <!--                <form class="form">-->
-                    <label for="todo-title">Title:</label>
-                    <input type="text" id="todo-title" placeholder="Enter todo title" required>
+                <label for="todo-title">Title:</label>
+                <input type="text" id="todo-title" placeholder="Enter todo title" required>
 
-                    <label for="todo-description">Description:</label>
-                    <textarea id="todo-description" placeholder="Enter todo description"></textarea>
+                <label for="todo-description">Description:</label>
+                <textarea id="todo-description" placeholder="Enter todo description"></textarea>
 
-                    <button class="add-task">Add Task</button>
-                    <button class="cancel">Cancel</button>
+                <div class="interval-container">
+                    <p class="interval-label">Interval:</p>
+                    <div class="interval-space">
+                        <div class="time-interval-space">done</div>
+                        <button class="show-calendar">
+                            <i class="fa-solid fa-calendar"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="add-task">Add Task</button>
+                <button class="cancel">Cancel</button>
 <!--                </form>-->
+            </div>
+
+            <div class="calendar-container">
+                <header class="calendar-header">
+                    <p class="calendar-current-date"></p>
+                    <div class="calendar-navigation">
+                <span id="calendar-prev">
+                    <i class="fa-solid fa-caret-left"></i>
+                </span>
+                <span id="calendar-next">
+                  <i class="fa-solid fa-caret-right"></i>
+                </span>
+                    </div>
+                </header>
+
+                <div class="calendar-body">
+                    <ul class="calendar-weekdays">
+                        <li>Sun</li>
+                        <li>Mon</li>
+                        <li>Tue</li>
+                        <li>Wed</li>
+                        <li>Thu</li>
+                        <li>Fri</li>
+                        <li>Sat</li>
+                    </ul>
+                    <ul class="calendar-dates"></ul>
+                </div>
             </div>
         </div>
     </div>
