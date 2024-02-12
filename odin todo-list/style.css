@@ -126,7 +126,7 @@ input, textarea {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .interval-space {
@@ -135,6 +135,7 @@ input, textarea {
 }
 
 .time-interval-space {
+    display: none;
     padding: 1px 30px;
     border: 1px solid #2a2a2a;
 }
