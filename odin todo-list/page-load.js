@@ -109,11 +109,10 @@ export function addTasks() {
         }
 
         dueDate.innerHTML = `<i class="fa-solid fa-calendar-days"></i>`
-
         dueDate.appendChild(dueDateText)
+
         titleDescription.className = 'title-description'
         titleDescription.innerHTML = `
-<!--        <label><input type="checkbox" class="checker"></label>-->
             <p>${title}</p>
             <p class="description">${description}</p>
         `
