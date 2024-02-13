@@ -76,6 +76,11 @@ article p {
     font-size: 13px;
 }
 
+.due-date {
+    color: rgb(212,79,68);
+    font-size: 13px;
+}
+
 .add-new {
     display: flex;
     align-items: center;
@@ -168,6 +173,9 @@ input, textarea {
 .checker {
     display: flex;
     width: auto;
+    accent-color: green;
+    border-radius: 50%;
+    margin-top: 5px;
 }
 
 * {

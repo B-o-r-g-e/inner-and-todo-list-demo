@@ -100,7 +100,10 @@ export function addTasks() {
         const titleDescription = document.createElement('div')
         const dueDate = document.createElement('div')
         dueDate.className = 'due-date'
-        dueDate.innerHTML = `${timeIntervalSpace.textContent}`
+        dueDate.innerHTML = `
+                <i class="fa-solid fa-calendar-days"></i>
+                ${timeIntervalSpace.textContent}
+            `
 
         titleDescription.className = 'title-description'
         titleDescription.innerHTML = `
@@ -128,7 +131,7 @@ export function addTasks() {
 //Really suffered more on this
 function handleCheckBox(article, titleDescription) {
     const checkbox = document.createElement('input')
-    checkbox.type = "checkbox"
+    checkbox.type = "radio"
     checkbox.className = 'checker'
     article.insertBefore(checkbox, titleDescription)
 
