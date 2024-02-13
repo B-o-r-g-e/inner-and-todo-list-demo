@@ -87,6 +87,8 @@ export function addTasks() {
     function addTask() {
         const title = document.getElementById('todo-title').value
         const description = document.getElementById('todo-description').value
+        const dueDate = document.createElement('div')
+        dueDate.className = 'due-date'
 
         const object = {title, description}
 
@@ -104,6 +106,7 @@ export function addTasks() {
             <p class="description">${description}</p>
         `
         article.appendChild(titleDescription)
+        article.appendChild(dueDate)
         todolistContainer.appendChild(article)
 
         todolistLibrary.push(object)
