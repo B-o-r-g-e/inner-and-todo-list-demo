@@ -269,6 +269,7 @@ export function calendar() {
 
 // Function to handle the click event on a date
     function handleDateClick(event) {
+        const calendarContainer = document.querySelector('.calendar-container')
         // Retrieve the clicked date
         const clickedDate = event.target.innerText;
         const timeIntervalSpace = document.querySelector('.time-interval-space')
@@ -276,6 +277,9 @@ export function calendar() {
         // Display the selected date (you can modify this part based on your requirements)
         // console.log((`Selected date: ${months[month]} ${clickedDate}, ${year}`));
         timeIntervalSpace.innerHTML = `${months[month]} ${clickedDate}, ${year}`
+
+        timeIntervalSpace.style.display = 'flex'
+        calendarContainer.style.display = 'none'
     }
 
 // Attach a click event listener to each date element
@@ -289,14 +293,9 @@ export function calendar() {
 export function openCalendar() {
     const showCalendar = document.querySelector('.show-calendar')
     const calendarContainer = document.querySelector('.calendar-container')
-    const day = document.querySelector(".calendar-dates");
+    // const timeIntervalSpace = document.querySelector(".time-interval-space");
 
     showCalendar.addEventListener('click', () => {
         calendarContainer.style.display = 'block'
-
-        if (day.click) {
-            // calendarContainer.style.display = 'block'
-            console.log('good')
-        }
     })
 }
