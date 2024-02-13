@@ -270,12 +270,12 @@ export function calendar() {
 // Function to handle the click event on a date
     function handleDateClick(event) {
         const calendarContainer = document.querySelector('.calendar-container')
+
         // Retrieve the clicked date
         const clickedDate = event.target.innerText;
         const timeIntervalSpace = document.querySelector('.time-interval-space')
 
-        // Display the selected date (you can modify this part based on your requirements)
-        // console.log((`Selected date: ${months[month]} ${clickedDate}, ${year}`));
+        // Display the selected date
         timeIntervalSpace.innerHTML = `${months[month]} ${clickedDate}, ${year}`
 
         timeIntervalSpace.style.display = 'flex'
