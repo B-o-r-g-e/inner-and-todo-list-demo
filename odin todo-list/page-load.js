@@ -100,11 +100,17 @@ export function addTasks() {
         const titleDescription = document.createElement('div')
         const dueDate = document.createElement('div')
         dueDate.className = 'due-date'
-        dueDate.innerHTML = `
-                <i class="fa-solid fa-calendar-days"></i>
-                ${timeIntervalSpace.textContent}
-            `
 
+        const dueDateText = document.createElement('div')
+        dueDateText.textContent = timeIntervalSpace.textContent
+
+        if (dueDateText.textContent === "") {
+            dueDate.style.display = 'none'
+        }
+
+        dueDate.innerHTML = `<i class="fa-solid fa-calendar-days"></i>`
+
+        dueDate.appendChild(dueDateText)
         titleDescription.className = 'title-description'
         titleDescription.innerHTML = `
 <!--        <label><input type="checkbox" class="checker"></label>-->
