@@ -1,4 +1,5 @@
 const todolistContainer = document.querySelector('.todo-lists')
+const timeIntervalSpace = document.querySelector('.time-interval-space')
 
 export const todolistLibrary = []
 export const taskCount = document.querySelector('.task-count')
@@ -97,12 +98,18 @@ export function addTasks() {
 
         const article = document.createElement('article')
         const titleDescription = document.createElement('div')
+        const dueDate = document.createElement('div')
+        dueDate.className = 'due-date'
+        dueDate.innerHTML = `${timeIntervalSpace.textContent}`
+
         titleDescription.className = 'title-description'
         titleDescription.innerHTML = `
 <!--        <label><input type="checkbox" class="checker"></label>-->
             <p>${title}</p>
             <p class="description">${description}</p>
         `
+
+        titleDescription.appendChild(dueDate)
         article.appendChild(titleDescription)
         todolistContainer.appendChild(article)
 
@@ -273,7 +280,7 @@ export function calendar() {
 
         // Retrieve the clicked date
         const clickedDate = event.target.innerText;
-        const timeIntervalSpace = document.querySelector('.time-interval-space')
+        // const timeIntervalSpace = document.querySelector('.time-interval-space')
 
         // Display the selected date
         timeIntervalSpace.innerHTML = `${months[month]} ${clickedDate}, ${year}`
