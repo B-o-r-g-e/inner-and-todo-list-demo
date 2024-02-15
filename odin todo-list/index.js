@@ -5,7 +5,7 @@ import {
     articles,
     calendar,
     createTodo,
-    openCalendar,
+    openCalendar, storeData,
     taskCountFunc
 } from "./page-load.js";
 
@@ -17,3 +17,4 @@ addID()
 taskCountFunc()
 calendar()
 openCalendar()
+storeData()

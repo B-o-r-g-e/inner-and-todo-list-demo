@@ -2,7 +2,7 @@ const todolistContainer = document.querySelector('.todo-lists')
 const timeIntervalSpace = document.querySelector('.time-interval-space')
 
 export const todolistLibrary = []
-export const taskCount = document.querySelector('.task-count')
+const taskCount = document.querySelector('.task-count')
 
 
 //automate task count
@@ -162,6 +162,7 @@ function handleCheckBox(article, titleDescription) {
     })
 }
 
+
 //calendar function
 export function calendar() {
     let date = new Date();
@@ -304,6 +305,7 @@ export function calendar() {
 
 }
 
+
 //open calendar
 export function openCalendar() {
     const showCalendar = document.querySelector('.show-calendar')
@@ -313,4 +315,20 @@ export function openCalendar() {
     showCalendar.addEventListener('click', () => {
         calendarContainer.style.display = 'block'
     })
+}
+
+
+//local storage function
+export function storeData() {
+    //store the array in local storage
+    localStorage.setItem('todolistLibrary', JSON.stringify(todolistLibrary))
+
+    //Retrieve the array from local storage
+    let retrieved = JSON.parse(localStorage.getItem('todolistLibrary'))
+
+    if (retrieved) {
+        console.log(retrieved)
+    } else {
+        console.log('bad')
+    }
 }
