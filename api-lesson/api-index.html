@@ -7,7 +7,15 @@
 <body>
     <img src="#" alt="">
     <script>
-
+        const img = document.querySelector('img')
+        fetch('https://api.giphy.com/v1/gifs/translate?api_key=vQJQ9i5fb53gMQKhzHZIh7RcQRUQHhBn&s=cats', {mode: "cors"})
+            .then((response) => {
+                return response.json()
+            })
+            .then((response) => {
+                console.log(response)
+                img.src = response.data.images.original.url
+            })
     </script>
 </body>
 </html>
