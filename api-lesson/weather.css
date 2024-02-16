@@ -1,7 +1,8 @@
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-4?styles=18006,18005,18004,18003');
 
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,9 +12,29 @@ body {
 .whole-content {
     display: flex;
     flex-direction: column;
-    height: 30%;
+    height: 25%;
     width: 15%;
     border-radius: 10px;
     justify-content: center;
     background-image: url("weather-asset/Storm.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    /*background-color: rgb(255, 255, 255, 0.5);*/
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
 }
