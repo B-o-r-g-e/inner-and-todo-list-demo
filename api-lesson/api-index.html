@@ -8,13 +8,20 @@
     <img src="#" alt="">
     <script>
         const img = document.querySelector('img')
-        fetch('https://api.giphy.com/v1/gifs/translate?api_key=vQJQ9i5fb53gMQKhzHZIh7RcQRUQHhBn&s=cats', {mode: "cors"})
-            .then((response) => {
-                return response.json()
-            })
-            .then((response) => {
-                img.src = response.data.images.original.url
-            })
+
+        async function getCat () {
+            try {
+                const response = await fetch('https://api.giphy.com/v1/gifs/translate?api_key=vQJQ9i5fb53gMQKhzHZIh7RcQRUQHhBn&s=dogs', {mode: "cors"})
+                const catData = await response.json()
+                img.src = catData.data.images.original.url
+            } catch (err) {
+                alert(err)
+            }
+
+        }
+
+        getCat()
+
     </script>
 </body>
 </html>
