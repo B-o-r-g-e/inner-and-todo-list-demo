@@ -6,7 +6,7 @@ const feelsLike = document.querySelector('.feels-like')
 
 async function getWeather() {
     try {
-        const response = await fetch('https://api.weatherapi.com/v1/current.json?key=8864366c27ee44c9bfd21149241502&q=London&aqi=no', {mode: "cors"})
+        const response = await fetch('https://api.weatherapi.com/v1/current.json?key=8864366c27ee44c9bfd21149241502&q=Lagos&aqi=no', {mode: "cors"})
         const weatherData = await response.json()
 
         state.innerHTML = weatherData.location.region
