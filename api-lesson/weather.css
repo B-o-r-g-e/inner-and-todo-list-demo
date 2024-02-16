@@ -1,0 +1,19 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.whole-content {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 15%;
+    border-radius: 10px;
+    justify-content: center;
+    background-image: url("weather-asset/Storm.jpeg");
+}
