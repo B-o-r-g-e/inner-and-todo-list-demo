@@ -11,8 +11,8 @@ body {
 .whole-content {
     display: flex;
     flex-direction: column;
-    height: 25%;
-    width: 15%;
+    height: 22%;
+    width: 14%;
     border-radius: 10px;
     justify-content: center;
     background-image: url("weather-asset/Storm.jpeg");
