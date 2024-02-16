@@ -51,12 +51,15 @@ header {
 
 .weather-container {
     display: flex;
-    gap: 10px;
+    gap: 5px;
+    align-items: end;
 }
 
 .weather-icon {
-    font-size: 32px;
+    /*font-size: 32px;*/
+    height: 42px;
 }
+
 
 .weather-container {
     font-size: 32px;
