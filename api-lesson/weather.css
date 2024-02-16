@@ -11,7 +11,7 @@ body {
 .whole-content {
     display: flex;
     flex-direction: column;
-    height: 30%;
+    height: 25%;
     width: 15%;
     border-radius: 10px;
     justify-content: center;
@@ -28,7 +28,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
     padding: 20px;
     margin: 0;
 }
@@ -58,4 +58,21 @@ header {
 
 .weather-container {
     font-size: 32px;
+    position: relative;
+}
+
+.weather-container span {
+    font-size: 12px;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.real-feel {
+    margin-top: -5px;
+    font-size: 12px;
 }
