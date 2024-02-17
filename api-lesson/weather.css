@@ -13,9 +13,10 @@ body {
     display: flex;
     flex-direction: column;
     /*height: 22%;*/
-    width: 14%;
+    /*width: 14%;*/
     border-radius: 10px;
     justify-content: center;
+    align-items: center;
     /*background-image: url("weather-asset/Storm.jpeg");*/
     background-repeat: no-repeat;
     background-position: center;
@@ -28,6 +29,7 @@ body {
     background-image: url("weather-asset/Storm.jpeg");
     /*height: 100%;*/
     color: white;
+    width: 14%;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -102,4 +104,10 @@ p {
 .condition {
     margin: 0;
     font-size: 12px;
+}
+
+.inner-part {
+    display: flex;
+    width: 70vw;
+    background-color: #ffc244;
 }
