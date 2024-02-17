@@ -8,7 +8,7 @@ const cons = document.querySelector('.condition')
 
 async function getWeather() {
     try {
-        const response = await fetch('https://api.weatherapi.com/v1/current.json?key=8864366c27ee44c9bfd21149241502&q=China&aqi=no', {mode: "cors"})
+        const response = await fetch('https://api.weatherapi.com/v1/current.json?key=8864366c27ee44c9bfd21149241502&q=United State&aqi=no', {mode: "cors"})
         const weatherData = await response.json()
         const condition = weatherData.current.condition.text
 
@@ -21,10 +21,12 @@ async function getWeather() {
 
         if (condition === 'Overcast') {
             wholeContent.style.backgroundImage = `url('weather-asset/overcast.jpeg')`
-        }else if (condition === 'Partly cloudy') {
+        } else if (condition === 'Partly cloudy') {
             wholeContent.style.backgroundImage = `url('weather-asset/partly.jpeg')`
         } else if (condition === 'Sunny') {
             wholeContent.style.backgroundImage = `url('weather-asset/sunny.jpeg')`
+        } else if (condition === 'Snow' || 'Light snow') {
+            wholeContent.style.backgroundImage = `url('weather-asset/snow.jpeg')`
         }
 
         console.log(weatherData)
