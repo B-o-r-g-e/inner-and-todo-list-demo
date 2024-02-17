@@ -1,4 +1,5 @@
 const wholeContent = document.querySelector('.whole-content')
+const container = document.querySelector('.container')
 const img = document.querySelector('.weather-icon')
 const state = document.querySelector('.state')
 const country = document.querySelector('.country')
@@ -42,8 +43,11 @@ async function getWeather(location) {
             wholeContent.style.backgroundImage = `url('weather-asset/rain.jpeg')`
         }
 
+        container.addEventListener('click', () => {
+            container.style.display = 'none'
+        })
+
         console.log(weatherData)
-        console.log(condition)
     } catch (e) {
         alert(e)
     }
