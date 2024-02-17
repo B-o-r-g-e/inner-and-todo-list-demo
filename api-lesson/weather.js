@@ -6,9 +6,12 @@ const weatherContainer = document.querySelector('.weather-condition')
 const feelsLike = document.querySelector('.feels-like')
 const cons = document.querySelector('.condition')
 
-async function getWeather() {
+async function getWeather(location) {
     try {
-        const response = await fetch('https://api.weatherapi.com/v1/current.json?key=8864366c27ee44c9bfd21149241502&q=United State&aqi=no', {mode: "cors"})
+        const response = await fetch(
+            `https://api.weatherapi.com/v1/current.json?key=8864366c27ee44c9bfd21149241502&q=${location}&aqi=no`,
+            {mode: "cors"}
+        )
         const weatherData = await response.json()
         const condition = weatherData.current.condition.text
 
@@ -46,4 +49,4 @@ async function getWeather() {
     }
 }
 
-getWeather()
+getWeather('Ukraine')
