@@ -16,7 +16,7 @@ body {
     width: 14%;
     border-radius: 10px;
     justify-content: center;
-    background-image: url("weather-asset/Storm.jpeg");
+    /*background-image: url("weather-asset/Storm.jpeg");*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -25,9 +25,10 @@ body {
 
 .container {
     background-color: rgba(75, 75, 75, 0.5);
+    background-image: url("weather-asset/Storm.jpeg");
     /*height: 100%;*/
     color: white;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     gap: 5px;

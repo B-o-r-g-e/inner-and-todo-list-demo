@@ -1,4 +1,4 @@
-const wholeContent = document.querySelector('.whole-content')
+// const wholeContent = document.querySelector('.whole-content')
 const container = document.querySelector('.container')
 const img = document.querySelector('.weather-icon')
 const state = document.querySelector('.state')
@@ -24,23 +24,23 @@ async function getWeather(location) {
         cons.innerHTML = condition
 
         if (condition === 'Overcast') {
-            wholeContent.style.backgroundImage = `url('weather-asset/overcast.jpeg')`
+            container.style.backgroundImage = `url('weather-asset/overcast.jpeg')`
         } else if (condition === 'Partly cloudy') {
-            wholeContent.style.backgroundImage = `url('weather-asset/partly.jpeg')`
+            container.style.backgroundImage = `url('weather-asset/partly.jpeg')`
         } else if (condition === 'Sunny') {
-            wholeContent.style.backgroundImage = `url('weather-asset/sunny.jpeg')`
+            container.style.backgroundImage = `url('weather-asset/sunny.jpeg')`
         } else if (condition === 'Snow' || 'Light snow') {
-            wholeContent.style.backgroundImage = `url('weather-asset/snow.jpeg')`
+            container.style.backgroundImage = `url('weather-asset/snow.jpeg')`
         } else if (condition === 'Clear sky') {
-            wholeContent.style.backgroundImage = `url('weather-asset/clear.jpeg')`
+            container.style.backgroundImage = `url('weather-asset/clear.jpeg')`
         } else if (condition === 'fog') {
-            wholeContent.style.backgroundImage = `url('weather-asset/fogsky.jpeg')`
+            container.style.backgroundImage = `url('weather-asset/fogsky.jpeg')`
         } else if (condition === 'Heavy rain') {
-            wholeContent.style.backgroundImage = `url('weather-asset/heavy.jpeg')`
+            container.style.backgroundImage = `url('weather-asset/heavy.jpeg')`
         } else if (condition === 'Mist') {
-            wholeContent.style.backgroundImage = `url('weather-asset/mist.jpeg')`
+            container.style.backgroundImage = `url('weather-asset/mist.jpeg')`
         } else if (condition === 'Rain') {
-            wholeContent.style.backgroundImage = `url('weather-asset/rain.jpeg')`
+            container.style.backgroundImage = `url('weather-asset/rain.jpeg')`
         }
 
         container.addEventListener('click', () => {
