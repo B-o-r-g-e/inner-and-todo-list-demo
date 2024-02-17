@@ -27,6 +27,16 @@ async function getWeather() {
             wholeContent.style.backgroundImage = `url('weather-asset/sunny.jpeg')`
         } else if (condition === 'Snow' || 'Light snow') {
             wholeContent.style.backgroundImage = `url('weather-asset/snow.jpeg')`
+        } else if (condition === 'Clear sky') {
+            wholeContent.style.backgroundImage = `url('weather-asset/clear.jpeg')`
+        } else if (condition === 'fog') {
+            wholeContent.style.backgroundImage = `url('weather-asset/fogsky.jpeg')`
+        } else if (condition === 'Heavy rain') {
+            wholeContent.style.backgroundImage = `url('weather-asset/heavy.jpeg')`
+        } else if (condition === 'Mist') {
+            wholeContent.style.backgroundImage = `url('weather-asset/mist.jpeg')`
+        } else if (condition === 'Rain') {
+            wholeContent.style.backgroundImage = `url('weather-asset/rain.jpeg')`
         }
 
         console.log(weatherData)
