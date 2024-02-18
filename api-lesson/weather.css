@@ -213,6 +213,7 @@ p {
     display: flex;
     flex-direction: column;
     font-family: 'Roboto Condensed', sans-serif;
+    gap: 2px;
 }
 
 .partly-sunny {
@@ -231,6 +232,10 @@ p {
     text-align: center;
     gap: 5px;
     text-transform: uppercase;
+    margin-left: -5px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.25;
 }
 
 
