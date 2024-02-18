@@ -164,7 +164,7 @@ p {
 
 .weather-display {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -176,6 +176,8 @@ p {
 .temp-container {
     display: flex;
     flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
 }
 
 .temperature {
@@ -196,7 +198,14 @@ p {
     bottom: 20px;
     right: 3px;
     font-family: 'Helvetica Neue LT Condensed', Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    font-size: 17px;
+}
+
+.real-feels {
+    margin: -15px 0 0 0;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: lighter;
 }
 
 
