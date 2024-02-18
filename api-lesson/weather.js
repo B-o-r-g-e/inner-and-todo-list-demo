@@ -57,7 +57,17 @@ function getTime() {
     const time = document.querySelector('.time')
     const now = new Date()
 
-    const hour = now.getHours()
+    let hours = now.getHours()
+    const minutes = now.getMinutes()
+    const seconds = now.getSeconds()
+    const meridian = hours >= 12 ? 'PM' : 'AM';
+
+    hours = hours % 12 || 12;
+    const formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')} ${meridian}`;
+
+    time.innerHTML = `${formattedTime}`
+
+    setInterval(getTime, 1000);
 }
 
 
