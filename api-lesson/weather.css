@@ -160,7 +160,7 @@ p {
 .left {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
 }
 
 .weather-display {
@@ -249,9 +249,16 @@ p {
 
 .each-line {
     display: flex;
-    gap: 300px;
+    /*gap: 300px;*/
     border-bottom: 1px solid rgba(0,0,0,.15);
     padding: 12px 0;
     flex-wrap: wrap;
     align-items: center;
+    width: 350px;
+    justify-content: space-between;
+}
+
+.topic {
+    font-size: 16px;
+    font-weight: 400;
 }
