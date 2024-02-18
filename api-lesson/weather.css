@@ -168,6 +168,11 @@ p {
     align-items: center;
 }
 
+.weather-image {
+    font-size: 55px;
+    color: rgb(253,137,60);
+}
+
 
 
 
