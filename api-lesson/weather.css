@@ -124,7 +124,7 @@ p {
     align-items: center;
     flex-direction: row;
     border-bottom: 1px solid #ccc;
-    padding: 20px;
+    padding: 15px 20px;
     gap: 20px;
 }
 
@@ -144,3 +144,36 @@ p {
     color: rgb(65,64,64);
     margin: 0;
 }
+
+.weather-box {
+    display: flex;
+    gap: 70px;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
