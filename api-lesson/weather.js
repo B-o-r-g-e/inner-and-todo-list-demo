@@ -53,6 +53,14 @@ async function getWeather(location) {
     }
 }
 
+function getTime() {
+    const time = document.querySelector('.time')
+    const now = new Date()
+
+    const hour = now.getHours()
+}
+
 
 
 getWeather('Ukraine')
+getTime()
