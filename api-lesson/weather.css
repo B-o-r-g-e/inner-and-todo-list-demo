@@ -170,7 +170,7 @@ p {
 }
 
 .weather-image {
-    font-size: 55px;
+    font-size: 70px;
     color: rgb(253,137,60);
 }
 
@@ -236,4 +236,22 @@ p {
     font-size: 10px;
     font-weight: 700;
     line-height: 1.25;
+}
+
+.right-container {
+    display: flex;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+}
+
+.each-line {
+    display: flex;
+    gap: 300px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    padding: 12px 0;
+    flex-wrap: wrap;
+    align-items: center;
 }
