@@ -167,11 +167,24 @@ p {
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: center;
 }
 
 .weather-image {
     font-size: 70px;
     color: rgb(253,137,60);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 50px;
+}
+
+.wi {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: -20px;
 }
 
 .temp-container {

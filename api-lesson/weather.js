@@ -1,12 +1,3 @@
-// const wholeContent = document.querySelector('.whole-content')
-const container = document.querySelector('.container')
-const img = document.querySelector('.weather-icon')
-const state = document.querySelector('.state')
-const country = document.querySelector('.country')
-const weatherContainer = document.querySelector('.weather-condition')
-const feelsLike = document.querySelector('.feels-like')
-const cons = document.querySelector('.condition')
-
 async function getWeather(location) {
     try {
         const response = await fetch(
@@ -15,6 +6,15 @@ async function getWeather(location) {
         )
         const weatherData = await response.json()
         const condition = weatherData.current.condition.text
+
+        // const wholeContent = document.querySelector('.whole-content')
+        const container = document.querySelector('.container')
+        const img = document.querySelector('.weather-icon')
+        const state = document.querySelector('.state')
+        const country = document.querySelector('.country')
+        const weatherContainer = document.querySelector('.weather-condition')
+        const feelsLike = document.querySelector('.feels-like')
+        const cons = document.querySelector('.condition')
 
         state.innerHTML = weatherData.location.region
         country.innerHTML = weatherData.location.country
@@ -53,6 +53,26 @@ async function getWeather(location) {
     }
 }
 
+async function fullWeather() {
+    try {
+        const response = await fetch(
+            `https://api.weatherapi.com/v1/current.json?key=8864366c27ee44c9bfd21149241502&q=${location}&aqi=no`,
+            {mode: "cors"}
+        )
+        const weatherData = await response.json()
+        const weatherImage = document.querySelector('.wi')
+
+
+        weatherImage.src = weatherData.current.condition.icon
+
+    } catch (e) {
+        alert(e)
+    }
+
+
+
+}
+
 function getTime() {
     const time = document.querySelector('.time')
     const now = new Date()
@@ -74,3 +94,4 @@ function getTime() {
 
 getWeather('Ukraine')
 getTime()
+fullWeather()
