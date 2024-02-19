@@ -47,7 +47,7 @@ async function getWeather(location) {
             container.style.display = 'none'
         })
 
-        console.log(weatherData)
+        // console.log(weatherData)
     } catch (e) {
         alert(e)
     }
@@ -68,6 +68,7 @@ async function fullWeather() {
         const wind = document.querySelector('.wind')
         const windGusts = document.querySelector('.wind-gusts')
         const color = document.querySelector('.color')
+        const innerPart = document.querySelector('.inner-part')
 
         weatherImage.src = weatherData.current.condition.icon
         temperature.innerHTML = `${weatherData.current.temp_c}&deg;`
@@ -89,6 +90,10 @@ async function fullWeather() {
                 color.textContent = 'Hazardous'
             }
         }
+
+        innerPart.addEventListener('click', () => {
+            console.log('Good')
+        })
 
         calcColor()
         getTime()
@@ -121,5 +126,4 @@ function getTime() {
 
 
 getWeather('Lagos')
-// getTime()
 fullWeather()
