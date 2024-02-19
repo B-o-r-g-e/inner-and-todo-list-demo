@@ -131,7 +131,8 @@ function getTime() {
 }
 
 function getValue() {
-    
+    const searchInput = document.getElementById('searchInput').value
+    console.log(searchInput)
 }
 
 
