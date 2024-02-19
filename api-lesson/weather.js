@@ -62,6 +62,12 @@ async function fullWeather() {
         const weatherData = await response.json()
         const weatherImage = document.querySelector('.wi')
         const temperature = document.querySelector('.temperature')
+        const realFeels = document.querySelector('.real-feels')
+        const partlySunny = document.querySelector('.partly-sunny')
+        const shade = document.querySelector('.shade')
+        const wind = document.querySelector('.wind')
+        const windGusts = document.querySelector('.wind-gusts')
+        const color = document.querySelector('.color')
 
 
         weatherImage.src = weatherData.current.condition.icon
