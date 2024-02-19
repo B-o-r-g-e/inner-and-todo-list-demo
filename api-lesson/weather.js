@@ -56,7 +56,7 @@ async function getWeather(location) {
 async function fullWeather() {
     try {
         const response = await fetch(
-            `https://api.weatherapi.com/v1/current.json?key=8864366c27ee44c9bfd21149241502&q=${location}&aqi=no`,
+            `https://api.weatherapi.com/v1/current.json?key=8864366c27ee44c9bfd21149241502&q=Lagos&aqi=yes`,
             {mode: "cors"}
         )
         const weatherData = await response.json()
@@ -75,6 +75,22 @@ async function fullWeather() {
         partlySunny.innerHTML = weatherData.current.condition.text
         shade.innerHTML = `${weatherData.current.feelslike_c}&deg;`
         wind.innerHTML = `${weatherData.current.wind_dir} ${weatherData.current.wind_kph} Km/h`
+        windGusts.innerHTML = `${weatherData.current.gust_kph} Km/h`
+
+        function calcColor() {
+            const AQI = weatherData.current.air_quality.pm10
+            if (AQI <= 50) {
+                color.textContent = `Good`
+            } else if (AQI >= 51 && AQI <= 100) {
+                color.textContent = `Moderate`
+            } else if (AQI >= 101 && AQI <= 300) {
+                color.textContent = `Poor`
+            } else {
+                color.textContent = 'Hazardous'
+            }
+        }
+
+        calcColor()
 
     } catch (e) {
         alert(e)
@@ -103,6 +119,6 @@ function getTime() {
 
 
 
-getWeather('Ukraine')
+getWeather('Lagos')
 getTime()
 fullWeather()
