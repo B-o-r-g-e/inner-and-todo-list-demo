@@ -49,16 +49,16 @@ async function getWeather(location) {
             innerPart.style.display = 'flex'
         })
 
-        // console.log(weatherData)
+        fullWeather(location)
     } catch (e) {
         alert(e)
     }
 }
 
-async function fullWeather() {
+async function fullWeather(location) {
     try {
         const response = await fetch(
-            `https://api.weatherapi.com/v1/current.json?key=8864366c27ee44c9bfd21149241502&q=Lagos&aqi=yes`,
+            `https://api.weatherapi.com/v1/current.json?key=8864366c27ee44c9bfd21149241502&q=${location}&aqi=yes`,
             {mode: "cors"}
         )
         const weatherData = await response.json()
@@ -129,5 +129,5 @@ function getTime() {
 
 
 
-getWeather('Lagos')
-fullWeather()
+getWeather('London')
+// fullWeather()
