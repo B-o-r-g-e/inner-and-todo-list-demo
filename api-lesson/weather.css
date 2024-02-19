@@ -176,7 +176,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: end;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .wi {
@@ -184,7 +184,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: end;
-    margin-top: -20px;
 }
 
 .temp-container {

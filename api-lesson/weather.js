@@ -61,6 +61,7 @@ async function fullWeather() {
         )
         const weatherData = await response.json()
         const weatherImage = document.querySelector('.wi')
+        const temperature = document.querySelector('.temperature')
 
 
         weatherImage.src = weatherData.current.condition.icon
