@@ -131,5 +131,5 @@ function getTime() {
 
 
 
-getWeather('Brazil')
+getWeather('Lagos')
 // fullWeather()
