@@ -130,7 +130,8 @@ function getTime() {
     setInterval(getTime, 1000);
 }
 
-function getValue() {
+function getValue(e) {
+    e.preventDefault()
     const searchInput = document.getElementById('searchInput').value
     console.log(searchInput)
 }
@@ -138,4 +139,5 @@ function getValue() {
 
 
 getWeather('Lagos')
+getValue()
 // fullWeather()
