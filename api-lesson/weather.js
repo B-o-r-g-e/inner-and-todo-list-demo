@@ -9,6 +9,7 @@ async function getWeather(location) {
 
         // const wholeContent = document.querySelector('.whole-content')
         const container = document.querySelector('.container')
+        const containers = document.querySelector('.containers')
         const img = document.querySelector('.weather-icon')
         const state = document.querySelector('.state')
         const country = document.querySelector('.country')
@@ -46,7 +47,7 @@ async function getWeather(location) {
             container.style.backgroundImage = `url("weather-asset/Storm.jpeg")`
         }
 
-        container.addEventListener('click', () => {
+        containers.addEventListener('click', () => {
             container.style.display = 'none'
             innerPart.style.display = 'flex'
         })
