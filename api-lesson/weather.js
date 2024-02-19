@@ -62,15 +62,17 @@ async function fullWeather() {
         const weatherData = await response.json()
         const weatherImage = document.querySelector('.wi')
         const temperature = document.querySelector('.temperature')
-        const realFeels = document.querySelector('.real-feels')
+        const realFeels = document.querySelector('.real-fils')
         const partlySunny = document.querySelector('.partly-sunny')
         const shade = document.querySelector('.shade')
         const wind = document.querySelector('.wind')
         const windGusts = document.querySelector('.wind-gusts')
         const color = document.querySelector('.color')
 
-
         weatherImage.src = weatherData.current.condition.icon
+        temperature.innerHTML = `${weatherData.current.temp_c}&deg;`
+        realFeels.innerHTML = `${weatherData.current.feelslike_c}&deg;`
+        partlySunny.innerHTML = weatherData.current.condition.text
 
     } catch (e) {
         alert(e)
