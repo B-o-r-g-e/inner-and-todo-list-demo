@@ -73,6 +73,7 @@ async function fullWeather() {
         temperature.innerHTML = `${weatherData.current.temp_c}&deg;`
         realFeels.innerHTML = `${weatherData.current.feelslike_c}&deg;`
         partlySunny.innerHTML = weatherData.current.condition.text
+        shade.innerHTML = `${weatherData.current.feelslike_c}&deg;`
 
     } catch (e) {
         alert(e)
