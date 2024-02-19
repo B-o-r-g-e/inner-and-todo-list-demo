@@ -30,7 +30,7 @@ async function getWeather(location) {
             container.style.backgroundImage = `url('weather-asset/partly.jpeg')`
         } else if (condition === 'Sunny') {
             container.style.backgroundImage = `url('weather-asset/sunny.jpeg')`
-        } else if (condition === 'Snow' || 'Light snow') {
+        } else if (condition === 'Snow' || condition === 'Light snow') {
             container.style.backgroundImage = `url('weather-asset/snow.jpeg')`
         } else if (condition === 'Clear sky') {
             container.style.backgroundImage = `url('weather-asset/clear.jpeg')`
@@ -42,6 +42,8 @@ async function getWeather(location) {
             container.style.backgroundImage = `url('weather-asset/mist.jpeg')`
         } else if (condition === 'Rain') {
             container.style.backgroundImage = `url('weather-asset/rain.jpeg')`
+        } else {
+            container.style.backgroundImage = `url("weather-asset/Storm.jpeg")`
         }
 
         container.addEventListener('click', () => {
@@ -129,5 +131,5 @@ function getTime() {
 
 
 
-getWeather('Lagos')
+getWeather('Brazil')
 // fullWeather()
