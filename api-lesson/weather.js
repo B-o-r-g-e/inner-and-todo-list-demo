@@ -129,5 +129,5 @@ function getTime() {
 
 
 
-getWeather('London')
+getWeather('Lagos')
 // fullWeather()
