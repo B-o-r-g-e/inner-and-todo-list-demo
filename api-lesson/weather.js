@@ -15,6 +15,7 @@ async function getWeather(location) {
         const weatherContainer = document.querySelector('.weather-condition')
         const feelsLike = document.querySelector('.feels-like')
         const cons = document.querySelector('.condition')
+        const innerPart = document.querySelector('.inner-part')
 
         state.innerHTML = weatherData.location.region
         country.innerHTML = weatherData.location.country
@@ -45,6 +46,7 @@ async function getWeather(location) {
 
         container.addEventListener('click', () => {
             container.style.display = 'none'
+            innerPart.style.display = 'flex'
         })
 
         // console.log(weatherData)
@@ -69,6 +71,7 @@ async function fullWeather() {
         const windGusts = document.querySelector('.wind-gusts')
         const color = document.querySelector('.color')
         const innerPart = document.querySelector('.inner-part')
+        const container = document.querySelector('.container')
 
         weatherImage.src = weatherData.current.condition.icon
         temperature.innerHTML = `${weatherData.current.temp_c}&deg;`
@@ -92,7 +95,8 @@ async function fullWeather() {
         }
 
         innerPart.addEventListener('click', () => {
-            console.log('Good')
+            innerPart.style.display = 'none'
+            container.style.display = 'flex'
         })
 
         calcColor()
