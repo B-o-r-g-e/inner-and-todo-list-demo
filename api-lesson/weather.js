@@ -130,10 +130,14 @@ function getTime() {
     setInterval(getTime, 1000);
 }
 
-function getValue(e) {
-    e.preventDefault()
+function getValue() {
+    const submitButton = document.querySelector('.submit')
     const searchInput = document.getElementById('searchInput').value
-    console.log(searchInput)
+
+    submitButton.addEventListener('click', (e) => {
+        e.preventDefault()
+        console.log(searchInput)
+    })
 }
 
 
