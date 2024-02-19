@@ -61,7 +61,7 @@ async function fullWeather() {
         )
         const weatherData = await response.json()
         const weatherImage = document.querySelector('.wi')
-        const temperature = document.querySelector('.temperature')
+        const temperature = document.querySelector('.temp')
         const realFeels = document.querySelector('.real-fils')
         const partlySunny = document.querySelector('.partly-sunny')
         const shade = document.querySelector('.shade')
