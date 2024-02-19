@@ -91,6 +91,7 @@ async function fullWeather() {
         }
 
         calcColor()
+        getTime()
 
     } catch (e) {
         alert(e)
@@ -120,5 +121,5 @@ function getTime() {
 
 
 getWeather('Lagos')
-getTime()
+// getTime()
 fullWeather()
