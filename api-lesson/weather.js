@@ -130,6 +130,10 @@ function getTime() {
     setInterval(getTime, 1000);
 }
 
+function getValue() {
+    
+}
+
 
 
 getWeather('Lagos')
