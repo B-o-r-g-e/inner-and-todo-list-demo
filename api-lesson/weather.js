@@ -96,7 +96,7 @@ async function fullWeather() {
 
         innerPart.addEventListener('click', () => {
             innerPart.style.display = 'none'
-            container.style.display = 'flex'
+            container.style.display = 'block'
         })
 
         calcColor()

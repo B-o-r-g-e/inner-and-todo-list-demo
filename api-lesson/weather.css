@@ -32,8 +32,8 @@ body {
     background-image: url("weather-asset/Storm.jpeg");
     /*height: 100%;*/
     color: white;
-    /*width: 14%;*/
-    display: none;
+    width: 150px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
@@ -110,7 +110,7 @@ p {
 }
 
 .inner-part {
-    display: flex;
+    display: none;
     flex-direction: column;
     /*width: 40vw;*/
     /*padding: 20px;*/
