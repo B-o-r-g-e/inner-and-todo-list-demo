@@ -143,7 +143,7 @@ function getValue() {
             return c.toUpperCase();
         });
         getWeather(sentenceCase)
-        searchInput.value = ''
+
     })
 }
 
