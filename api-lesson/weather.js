@@ -108,9 +108,6 @@ async function fullWeather(location) {
     } catch (e) {
         alert(e)
     }
-
-
-
 }
 
 function getTime() {
