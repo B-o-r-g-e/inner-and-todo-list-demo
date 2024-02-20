@@ -21,7 +21,10 @@ async function getWeather(location) {
         state.innerHTML = weatherData.location.region
         country.innerHTML = weatherData.location.country
         img.src = weatherData.current.condition.icon
-        weatherContainer.innerHTML = `${weatherData.current.temp_c}&deg;`
+        weatherContainer.innerHTML = `
+                ${weatherData.current.temp_c}&deg;
+                <span class="unit">C</span>
+            `
         feelsLike.innerHTML = `${weatherData.current.feelslike_c}&deg;`
         cons.innerHTML = condition
 
@@ -137,11 +140,12 @@ function getValue() {
             return c.toUpperCase();
         });
         getWeather(sentenceCase)
+        searchInput.value = ''
     })
 }
 
 
 
-getWeather('Lagos')
+// getWeather('Lagos')
 getValue()
 // fullWeather()
