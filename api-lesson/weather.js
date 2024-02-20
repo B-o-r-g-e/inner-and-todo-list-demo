@@ -136,6 +136,9 @@ function getValue() {
 
     submitButton.addEventListener('click', (e) => {
         e.preventDefault()
+        var sentenceCase = searchInput.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, function(c) {
+            return c.toUpperCase();
+        });
         console.log(searchInput)
     })
 }
