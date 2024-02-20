@@ -143,12 +143,12 @@ function getValue() {
             return c.toUpperCase();
         });
         getWeather(sentenceCase)
-
+        document.getElementById('.searchInput').value = ''
     })
 }
 
 
 
-getWeather('Lagos')
+// getWeather('Lagos')
 getValue()
 // fullWeather()
