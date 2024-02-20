@@ -132,11 +132,11 @@ function getTime() {
 
 function getValue() {
     const submitButton = document.querySelector('.submit')
-    const searchInput = document.getElementById('searchInput').value
 
     submitButton.addEventListener('click', (e) => {
         e.preventDefault()
-        var sentenceCase = searchInput.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, function(c) {
+        const searchInput = document.getElementById('searchInput').value
+        let sentenceCase = searchInput.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, function(c) {
             return c.toUpperCase();
         });
         console.log(searchInput)
