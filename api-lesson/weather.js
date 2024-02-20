@@ -14,7 +14,7 @@ async function getWeather(location) {
         const state = document.querySelector('.state')
         const country = document.querySelector('.country')
         const weatherContainer = document.querySelector('.weather-condition')
-        const feelsLike = document.querySelector('.feels-like')
+        const feelsLike = document.querySelector('.real-feel')
         const cons = document.querySelector('.condition')
         const innerPart = document.querySelector('.inner-part')
 
@@ -25,7 +25,10 @@ async function getWeather(location) {
                 ${weatherData.current.temp_c}&deg;
                 <span class="unit">C</span>
             `
-        feelsLike.innerHTML = `${weatherData.current.feelslike_c}&deg;`
+        feelsLike.innerHTML = `
+                RealFeel <span class="feels-like">${weatherData.current.feelslike_c}&deg;</span>
+                
+            `
         cons.innerHTML = condition
 
         if (condition === 'Overcast') {
@@ -146,6 +149,6 @@ function getValue() {
 
 
 
-// getWeather('Lagos')
+getWeather('Lagos')
 getValue()
 // fullWeather()
