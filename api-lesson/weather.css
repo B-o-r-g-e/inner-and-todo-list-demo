@@ -37,6 +37,10 @@ body {
     padding: 5px 0 5px 5px;
 }
 
+#searchInput:focus {
+    outline: none;
+}
+
 #form {
     display: flex;
     align-items: center;

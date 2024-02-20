@@ -136,7 +136,7 @@ function getValue() {
         let sentenceCase = searchInput.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, function(c) {
             return c.toUpperCase();
         });
-        console.log(sentenceCase)
+        getWeather(sentenceCase)
     })
 }
 
