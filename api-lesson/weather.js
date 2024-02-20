@@ -151,6 +151,6 @@ function getValue() {
 
 
 
-// getWeather('Lagos')
+getWeather('Lagos')
 getValue()
 // fullWeather()
