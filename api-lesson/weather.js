@@ -142,8 +142,10 @@ function getValue() {
         let sentenceCase = searchInput.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, function(c) {
             return c.toUpperCase();
         });
+
+        searchInput.innerHTML = ''
+        console.log(searchInput)
         getWeather(sentenceCase)
-        document.getElementById('.searchInput').value = ''
     })
 }
 
