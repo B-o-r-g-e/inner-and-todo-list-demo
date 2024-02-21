@@ -11,6 +11,7 @@ function fibs(n) {
             result.push(result[i - 1] + result [i - 2])
         }
         // return result
+
         console.log(result)
 
     }
