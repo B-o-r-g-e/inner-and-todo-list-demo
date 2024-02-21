@@ -17,9 +17,10 @@ function fibs(n) {
 }
 
 function fibsRec(n, current  = 0, next = 1, result = []) {
-    if (n < 2) {
+    if (n === 2) {
         return result
     }
+
 }
 
 fibs(3)
