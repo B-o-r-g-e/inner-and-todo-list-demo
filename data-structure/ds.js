@@ -26,45 +26,42 @@ class LinkedList {
 
     prepend(value) {
         const newNode = new Node(value);
-        newNode.next = this.head;
+        if (this.head) {
+            newNode.next = this.head;
+        }
         this.head = newNode;
     }
 
     size() {
         let count = 0;
-        let current = this.head;
-        while (current) {
-            count++;
-            current = current.next;
+        if (this.head) {
+            let current = this.head;
+            do {
+                count++;
+                current = current.next;
+            } while (current);
         }
         return count;
     }
 
-    head() {
-        return this.head;
-    }
-
-    tail() {
-        let current = this.head;
-        while (current && current.next) {
-            current = current.next;
-        }
-        return current;
-    }
-
     at(index) {
-        if (index < 0) {
+        if (index < 0 || !this.head) {
             return null;
         }
 
         let count = 0;
         let current = this.head;
-        while (current && count < index) {
-            current = current.next;
-            count++;
+        if (current) {
+            do {
+                if (count === index) {
+                    return current;
+                }
+                count++;
+                current = current.next;
+            } while (current);
         }
 
-        return current ? current : null;
+        return null;
     }
 
     pop() {
@@ -80,48 +77,36 @@ class LinkedList {
 
         let current = this.head;
         let previous = null;
-        while (current.next) {
-            previous = current;
-            current = current.next;
+        if (current) {
+            do {
+                if (!current.next) {
+                    previous.next = null;
+                    return current;
+                }
+                previous = current;
+                current = current.next;
+            } while (current);
         }
 
-        previous.next = null;
-        return current;
-    }
-
-    contains(value) {
-        let current = this.head;
-        while (current) {
-            if (current.value === value) {
-                return true;
-            }
-            current = current.next;
-        }
-        return false;
-    }
-
-    find(value) {
-        let index = 0;
-        let current = this.head;
-        while (current) {
-            if (current.value === value) {
-                return index;
-            }
-            current = current.next;
-            index++;
-        }
         return null;
     }
 
-    toString() {
-        let result = '';
-        let current = this.head;
-        while (current) {
-            result += `(${current.value}) -> `;
-            current = current.next;
+    tail() {
+        if (!this.head) {
+            return null;
         }
-        result += 'null';
-        return result;
+
+        let current = this.head;
+        if (current) {
+            do {
+                if (!current.next) {
+                    return current;
+                }
+                current = current.next;
+            } while (current);
+        }
+
+        return null;
     }
 }
 
@@ -135,7 +120,5 @@ console.log(linkedList.size()); // 3
 console.log(linkedList.head()); // Node { value: 5, next: Node { value: 10, next: Node { value: 20, next: null } } }
 console.log(linkedList.tail()); // Node { value: 20, next: null }
 console.log(linkedList.at(1)); // Node { value: 10, next: Node { value: 20, next: null } }
-console.log(linkedList.contains(20)); // true
-console.log(linkedList.find(10)); // 1
 console.log(linkedList.pop()); // Node { value: 20, next: null }
 console.log(linkedList.toString()); // (5) -> (10) -> null
