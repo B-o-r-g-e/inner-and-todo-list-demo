@@ -13,3 +13,21 @@ test('reverse a string', () => {
     expect(reverseString('world')).toBe('dlrow');
     expect(reverseString('')).toBe(''); // empty string should remain empty
 });
+
+const calculator = require('./your-module'); // replace with the correct path
+
+test('add', () => {
+    expect(calculator.add(2, 3)).toBe(5);
+});
+
+test('subtract', () => {
+    expect(calculator.subtract(5, 3)).toBe(2);
+});
+
+test('multiply', () => {
+    expect(calculator.multiply(2, 3)).toBe(6);
+});
+
+test('divide', () => {
+    expect(calculator.divide(6, 3)).toBe(2);
+});
