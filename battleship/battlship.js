@@ -126,4 +126,4 @@ while (!playerGameboard.allShipsSunk() && !computerGameboard.allShipsSunk()) {
 if (playerGameboard.allShipsSunk()) {
     console.log('Computer wins!');
 } else {
-    console.log('Player wins!');
+    console.log('Player wins!')};
