@@ -31,3 +31,13 @@ test('multiply', () => {
 test('divide', () => {
     expect(calculator.divide(6, 3)).toBe(2);
 });
+
+
+const caesarCipher = require('./your-module'); // replace with the correct path
+
+test('caesar cipher', () => {
+    expect(caesarCipher('abc', 1)).toBe('bcd');
+    expect(caesarCipher('xyz', 1)).toBe('yza');
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+    // Add more test cases for wrapping, same case, and punctuation
+});
