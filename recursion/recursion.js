@@ -25,3 +25,21 @@ function fibsRec(n, current  = 0, next = 1, result = []) {
 
 fibs(3)
 // fibsRec(8)
+
+//
+// const someOrder = {
+//     items: [
+//         {name: 'joy', price: 8, quantity: 10},
+//         {name: 'joy', price: 8, quantity: 10}
+//     ],/*
+//
+//     shopper: [
+//         {country: 'Nigeria'},
+//         {country: 'USA'}
+//     ]*/
+// }
+//
+// const orderTotal = order => {
+//     const totalItems = order.items
+//     console.log(totalItems)
+// }
