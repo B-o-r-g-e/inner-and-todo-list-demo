@@ -90,3 +90,40 @@ test('Gameboard allShipsSunk function', () => {
     ship2.hit();
     expect(gameboard.allShipsSunk()).toBe(true);
 });
+
+
+class Player {
+    constructor(gameboard) {
+        this.gameboard = gameboard;
+    }
+
+    attackEnemyGameboard(enemyGameboard, coordinates) {
+        enemyGameboard.receiveAttack(coordinates);
+    }
+}
+
+// Game loop
+const playerGameboard = new Gameboard();
+const computerGameboard = new Gameboard();
+const player = new Player(playerGameboard);
+const computerPlayer = new Player(computerGameboard);
+
+// Populate gameboards with predetermined coordinates
+playerGameboard.placeShip(new Ship(3), [[0, 0], [0, 1], [0, 2]]);
+computerGameboard.placeShip(new Ship(3), [[1, 0], [1, 1], [1, 2]]);
+
+while (!playerGameboard.allShipsSunk() && !computerGameboard.allShipsSunk()) {
+    // Player's turn
+    const playerAttackCoordinates = [prompt('Enter attack x-coordinate:'), prompt('Enter attack y-coordinate:')];
+    player.attackEnemyGameboard(computerGameboard, playerAttackCoordinates);
+
+    // Computer's turn (random play)
+    const computerAttackCoordinates = [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10)];
+    computerPlayer.attackEnemyGameboard(playerGameboard, computerAttackCoordinates);
+}
+
+// Determine the winner
+if (playerGameboard.allShipsSunk()) {
+    console.log('Computer wins!');
+} else {
+    console.log('Player wins!');
