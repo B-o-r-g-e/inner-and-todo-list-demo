@@ -41,3 +41,15 @@ test('caesar cipher', () => {
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
     // Add more test cases for wrapping, same case, and punctuation
 });
+
+const analyzeArray = require('./your-module'); // replace with the correct path
+
+test('analyze array', () => {
+    const result = analyzeArray([1, 8, 3, 4, 2, 6]);
+    expect(result).toEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+    });
+});
