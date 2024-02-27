@@ -43,3 +43,11 @@ fibs(3)
 //     const totalItems = order.items
 //     console.log(totalItems)
 // }
+
+if (orderTotal({
+    items: [
+        { 'name': 'dragon candy', price: 2, quantity: 3 }
+    ]
+}) !== 6){
+    throw new Error('check fail: No quantity specified')
+}
